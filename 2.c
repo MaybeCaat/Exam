@@ -10,7 +10,8 @@ int sumFoo(int n) {
 }
 
 int main() {
-    int n = 3;
+    int n;
+    scanf("%d", &n);
     printf("%d", sumFoo(n));
     return 0;
 }
