@@ -7,8 +7,8 @@ struct Coord {
 };
 
 int canGet(struct Coord start, struct Coord finish) {
-    int disX = abs(start.x) - abs(finish.x);
-    int disY = abs(start.y) - abs(finish.y);
+    int disX = abs(start.x - finish.x);
+    int disY = abs(start.y - finish.y);
     if (disX <= 1 && disY <= 1) {
         return 1;
     }
@@ -16,7 +16,8 @@ int canGet(struct Coord start, struct Coord finish) {
 }
 
 int main() {
-    struct Coord start = {2, 3}, finish = {1, 3};
+    struct Coord start, finish;
+    scanf("%d %d %d %d", &start.x, &start.y, &finish.x, &finish.y);
     printf("%d", canGet(start, finish));
     return 0;
 }
